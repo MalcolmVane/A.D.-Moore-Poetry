@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>A.D. Moore Poetry</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lateef&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oooh+Baby&display=swap" rel="stylesheet">
+    <style media="screen">
+    * {
+      font-family: 'Lateef', cursive;
+    }
+      body {
+        margin: 0;
+        padding: 0;
+        scroll-behavior: smooth;
+      }
+      nav {
+        padding: 5px;
+        padding-left: 50px;
+        background: #F4F4F4;
+        font-family: 'Oooh Baby';
+        display: flex;
+      }
+      h1 {
+        font-size: 25px;
+        margin: 5px;
+      }
+      a {
+        color: black;
+        text-decoration: none;
+        margin-left: 50px;
+      }
+      .poemcontainer {
+        width:400px;background:#F4F4F4;margin:20px;border-radius:10px;padding:20px;border: 1px solid darkgrey;
+      }
+      .poemcontainer h2 {
+        cursor: pointer;
+        font-size: 30px;
+      }
+      .poemcontainer hr {
+        outline:none;background:none;border:1px solid darkgrey;
+      }
+      .poemcontainer p {
+        font-size: 20px;
+        overflow: hidden;
+      }
+      .poemcontainer h3 {
+        font-family: 'Oooh Baby', cursive;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <h1 style="font-family: 'Oooh Baby', cursive;">A.D. Moore Poetry</h1>
+      <h1 style="font-family: 'Oooh Baby', cursive;"><a href="#poems" style="font-family: 'Oooh Baby', cursive;">Poems</a></h1>
+    </nav>
+    <span id="poems"></span>
+    <h1 style="font-size: 50px;margin:20px;">Poetry</h1>
+    </div>
+    <script>
+    class Poem {
+      constructor(title, content) {
+        this.title = title;
+        this.content = content;
+      }
+      addToScreen() {
+        let element = `<div class="poemcontainer"><h2>${this.title}</h2><hr><p>${this.content}</p><h3>-Amber Moore</h3>`;
+        document.querySelector('body').innerHTML += element;
+      }
+    }
+    const poems = [];
+
+  poems.forEach(poem => {
+    poem.addToScreen();
+  });
+
+    </script>
+  </body>
+</html>
